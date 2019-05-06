@@ -43,7 +43,8 @@ void Renderer::DrawScene()
 	DrawText(m_pFont, XorStr("Inferno"), ImVec2(10, 10), 32.0f, 0xFFFFFFFF);
 
 	if (Settings::bESPEnabled) {
-		DrawRectFilled(ImVec2(100, 50), ImVec2(200, 400), 0xFFFFFFFF, 0, 0);
+		//Not trans but grey, if I put 00 it becomes trans
+		DrawRectFilled(ImVec2(100, 50), ImVec2(200, 400), 0xCCFFFFFF, 0, 0);
 	}
 
 	Sleep(100);
